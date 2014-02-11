@@ -33,4 +33,7 @@ Railsfour::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # Devise mailer url. Must be set to actual url in production once live
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

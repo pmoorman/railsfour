@@ -77,4 +77,12 @@ Railsfour::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Devise mailer url. Must be set to actual url in production once live
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+  config.assets.initialize_on_precompile = false
+  # On config/application.rb forcing your application to not access the DB
+  # or load models when precompiling your assets.
 end
